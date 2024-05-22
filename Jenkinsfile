@@ -29,10 +29,10 @@ pipeline{
         stage('DockerHub Push'){
             steps{
                 withCredentials([string(credentialsId: 'docker-hub', variable: 'dockerHubPwd')]) {
-                    sh "docker login -u kammana -p ${dockerHubPwd}"
+                    sh "docker login -u skimranhussen -p ${dockerHubPwd}"
                 }
                 
-                sh "docker push kammana/hariapp:${DOCKER_TAG} "
+                sh "docker push skimranhussen/jenkins:${DOCKER_TAG} "
             }
         }
         
