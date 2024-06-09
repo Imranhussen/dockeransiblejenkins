@@ -31,8 +31,8 @@ pipeline{
                 /*withCredentials([string(credentialsId: 'docker-hub', variable: 'dockerHubPwd')]) {
                     sh "docker login -u skimranhussen -p ${dockerHubPwd}"*/
                     sh "docker login -u skimranhussen -p Imran@786"
-                }                
-                sh "docker push skimranhussen/jenkins:${DOCKER_TAG} "
+                    sh "docker push skimranhussen/jenkins:${DOCKER_TAG} "
+                }
             }
         
         
