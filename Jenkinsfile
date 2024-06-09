@@ -34,7 +34,7 @@ pipeline{
                 }                
                 sh "docker push skimranhussen/jenkins:${DOCKER_TAG} "
             }
-        }
+        
         
         stage('Docker Deploy'){
             steps{
